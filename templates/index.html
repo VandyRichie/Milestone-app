@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Barb's Shoe Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Barb's Shoe Store</h1>
+        <div id="user-info"></div>
+        <button id="register-button">Register</button>
+        <button id="login-logout-button">Login/Logout</button>
+    </header>
+
+    <main>
+        <button id="view-cart">View Cart</button>
+        <section id="shopping-cart">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <button id="checkout">Checkout</button>
+        </section>
+        
+        <section id="register-form" style="display: none;">
+            <h2>Register</h2>
+            <form id="registration-form" method="POST" action="/register">
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+        
+        <section id="login-form" style="display: none;">
+            <h2>Login</h2>
+            <form id="login-form" method="POST" action="/login">
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+           
+        <div id="product-details-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 id="modal-shoe-name"></h2>
+                <img id="modal-shoe-image" src="" alt="">
+                <p id="modal-shoe-price"></p>
+                <p id="modal-shoe-details"></p>
+            </div>
+        </div>
+        
+        <section id="featured-products">
+            <h2>Featured Footwears</h2>
+            <div class="product-container"></div>
+        </section>
+
+        <section id="all-products">
+            <h2>All Footwears</h2>
+            <div class="product-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Barb's Shoe Store</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
